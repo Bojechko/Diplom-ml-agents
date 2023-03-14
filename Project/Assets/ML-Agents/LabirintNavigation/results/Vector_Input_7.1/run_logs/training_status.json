@@ -1,0 +1,29 @@
+{
+    "Labirint": {
+        "checkpoints": [
+            {
+                "steps": 30748,
+                "file_path": "results\\Vector_Input_7.1\\Labirint\\Labirint-30748.onnx",
+                "reward": null,
+                "creation_time": 1678731741.7115748,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_7.1\\Labirint\\Labirint-30748.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 30748,
+            "file_path": "results\\Vector_Input_7.1\\Labirint.onnx",
+            "reward": null,
+            "creation_time": 1678731741.7115748,
+            "auxillary_file_paths": [
+                "results\\Vector_Input_7.1\\Labirint\\Labirint-30748.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

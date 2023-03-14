@@ -24,19 +24,24 @@ public class LabirintEnvController : MonoBehaviour
 
     Rigidbody labirintAgentRb;
 
+    [SerializeField]
+    public MazeSpawner mazeSpawner;
+
     private int resetTimer;
     public int MaxEnvironmentSteps;
 
     void Start()
     {
                 // Used to control agent & ball starting positions
-        startPosition = transform.position;
+       
+
         labirintAgentRb = labirintAgent.GetComponent<Rigidbody>();
+        startPosition = transform.position;
+       // startPosition.y -= transform.position.y;
+        //mazeSpawner = GetComponent<MazeSpawner>();
        
         ResetScene();
-    }
-
-    
+    } 
 
 
     public void ResolveEvent(Event triggerEvent)
@@ -46,28 +51,24 @@ public class LabirintEnvController : MonoBehaviour
             case Event.HitWall:
                
                  // apply penalty
-                labirintAgent.AddReward(-10f);
+                labirintAgent.AddReward(-200f);
                 labirintAgent.EndEpisode();
 
                 ResetScene();
                 break;            
 
-            case Event.StepForward:
-                
-               // labirintAgent.AddReward(0.3f);
-                
+            case Event.StepForward:                
+                labirintAgent.AddReward(5f);                
                 break;
             
-            case Event.StepNotForward:
-                
-                labirintAgent.AddReward(-5f);
-                
+            case Event.StepNotForward:                
+                labirintAgent.AddReward(-200f);
+                labirintAgent.EndEpisode();
+                ResetScene();                
                 break;
                 
             case Event.Rotate:
-
-                //labirintAgent.AddReward(3f);
-                
+                labirintAgent.AddReward(5f);                
                 break;
                 
             case Event.StepedOnNewFloor:
@@ -102,16 +103,13 @@ public class LabirintEnvController : MonoBehaviour
         //labirintAgent.transform.eulerAngles = Vector3.zero;
         
         var randomPosY = 1f;
-        var randomRot = 0;//Random.Range(-45f, 45f);
+        var randomRot = Random.Range(-10f, 10f);
 
+        //labirintAgent.transform.localPosition = new Vector3(randomPosX, startPosition, randomPosZ);
         labirintAgent.transform.localPosition = new Vector3(randomPosX, randomPosY - startPosition.y, randomPosZ);
         labirintAgent.transform.eulerAngles = new Vector3(0, randomRot, 0);
 
-       // labirintAgent.GetComponent<Rigidbody>().velocity = default(Vector3);       
-        AllObjWithTag = GameObject.FindGameObjectsWithTag("floor"); 
-        foreach (GameObject obj in AllObjWithTag) {
-            obj.GetComponent<IFloor>().isStepped = false;
-        }
+        mazeSpawner.Restart();
     }
    
 }

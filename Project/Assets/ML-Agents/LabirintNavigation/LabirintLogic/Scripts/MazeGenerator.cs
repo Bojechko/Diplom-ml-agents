@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MazeGenerator
+public class MazeGenerator : MonoBehaviour
 {
     public int Width = 20;
     public int Height = 20;

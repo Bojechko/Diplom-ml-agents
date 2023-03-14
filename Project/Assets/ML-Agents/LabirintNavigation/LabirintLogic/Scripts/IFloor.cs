@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.MLAgents;
 
 public class IFloor : MonoBehaviour
 {
@@ -9,17 +10,17 @@ public class IFloor : MonoBehaviour
     
     public bool isStepped = false;
 
-    public void Initialize()
+    public void Start()
     {
-        envController = GetComponentInParent<LabirintEnvController>();
+        envController = GetComponent<LabirintEnvController>();
     }
 
-     void OnCollisionEnter(Collision other)
+    /* void OnCollisionEnter(Collision other)
     {
        if ((other.gameObject.CompareTag("agent")) && (!isStepped)){
             isStepped = true;
             envController.ResolveEvent(Event.StepedOnNewFloor);
        }        
        
-    }
+    }*/
 }

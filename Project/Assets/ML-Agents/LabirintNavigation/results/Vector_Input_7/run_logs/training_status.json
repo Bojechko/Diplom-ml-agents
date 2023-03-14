@@ -1,0 +1,56 @@
+{
+    "Labirint": {
+        "checkpoints": [
+            {
+                "steps": 3760,
+                "file_path": "results\\Vector_Input_7\\Labirint\\Labirint-3760.onnx",
+                "reward": 0.0,
+                "creation_time": 1678731221.2084038,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_7\\Labirint\\Labirint-3760.pt"
+                ]
+            },
+            {
+                "steps": 12706,
+                "file_path": "results\\Vector_Input_7\\Labirint\\Labirint-12706.onnx",
+                "reward": 0.0,
+                "creation_time": 1678731302.4041705,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_7\\Labirint\\Labirint-12706.pt"
+                ]
+            },
+            {
+                "steps": 14711,
+                "file_path": "results\\Vector_Input_7\\Labirint\\Labirint-14711.onnx",
+                "reward": 0.20833333333333334,
+                "creation_time": 1678731390.3176432,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_7\\Labirint\\Labirint-14711.pt"
+                ]
+            },
+            {
+                "steps": 19818,
+                "file_path": "results\\Vector_Input_7\\Labirint\\Labirint-19818.onnx",
+                "reward": -0.039525691699604744,
+                "creation_time": 1678731465.2162197,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_7\\Labirint\\Labirint-19818.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 19818,
+            "file_path": "results\\Vector_Input_7\\Labirint.onnx",
+            "reward": -0.039525691699604744,
+            "creation_time": 1678731465.2162197,
+            "auxillary_file_paths": [
+                "results\\Vector_Input_7\\Labirint\\Labirint-19818.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

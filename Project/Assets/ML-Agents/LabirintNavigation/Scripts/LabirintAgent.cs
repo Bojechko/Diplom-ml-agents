@@ -9,33 +9,37 @@ public class LabirintAgent : Agent
 
     public Rigidbody m_AgentRb;
 
-    public Rigidbody goal;
+    //public Rigidbody goal;
 
     [HideInInspector]
     public LabirintEnvController envController;
 
     private Vector3 startPosition;
 
-    private float distance = 0;
-    //private float newDistance = 0;
+    private float counter = 0;
+  //  private float newDistance = 0;
+    public GameObject objInFront;
 
     public override void Initialize()
-    {
-        
-        
+    {     
         m_AgentRb = GetComponent<Rigidbody>();
-        distance = Vector3.Distance(startPosition, m_AgentRb.transform.localPosition);
-        startPosition = m_AgentRb.transform.position;
+      //  distance = Vector3.Distance(startPosition, m_AgentRb.transform.localPosition);
+       // startPosition = m_AgentRb.transform.position;
+        
         envController = GetComponentInParent<LabirintEnvController>();
      
     }
 
+    public void Start(){
+        objInFront = GameObject.FindWithTag("wall");
+    }
+
     public override void CollectObservations(VectorSensor sensor)
     {
-      //  sensor.AddObservation(IHaveAKey);
-      sensor.AddObservation(this.transform.rotation.y);
-      sensor.AddObservation(m_AgentRb.velocity);
-      sensor.AddObservation(this.transform.position);
+        sensor.AddObservation(this.transform.rotation.y);
+        sensor.AddObservation(m_AgentRb.velocity);
+        sensor.AddObservation(this.transform.position);
+        sensor.AddObservation(objInFront.transform.position);                       
     }
 
    
@@ -49,8 +53,7 @@ public class LabirintAgent : Agent
         switch (action)
         {
             case 1:
-                dirToGo = transform.forward * 1f;
-                envController.ResolveEvent(Event.StepForward); 
+                dirToGo = transform.forward * 1f;                
                 break;
          //   case 2:
               //  dirToGo = transform.forward * -1f;
@@ -71,22 +74,39 @@ public class LabirintAgent : Agent
     }
 
     void FixedUpdate(){
-       /* newDistance = Vector3.Distance(startPosition, m_AgentRb.transform.localPosition);
-        if (distance < newDistance){
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, fwd, out hit)){            
+            objInFront =  hit.transform.gameObject;          
+                
+        }
+
+        /*newDistance = Vector3.Distance(startPosition, m_AgentRb.transform.localPosition);
+        if ( -3f < distance - newDistance || distance - newDistance < 3f){
             envController.ResolveEvent(Event.StepForward);
-        } else {*/
-            
-       /* }
+        } 
         distance = newDistance;*/
-        if (m_AgentRb.velocity.magnitude < 1){
+        /*
+        if (m_AgentRb.velocity. < 1){
             envController.ResolveEvent(Event.StepNotForward); 
-        }       
+        }       */
+
+        if (m_AgentRb.velocity.magnitude < 1.0 ){
+            counter++;
+            if (counter > 20){
+                envController.ResolveEvent(Event.StepNotForward); 
+                counter = 0;
+            }
+            
+        } else {
+            envController.ResolveEvent(Event.StepForward); 
+        }
         
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
-    {
-       
+    {       
         MoveAgent(actionBuffers.DiscreteActions);
     }
 
@@ -94,7 +114,15 @@ public class LabirintAgent : Agent
     {
        if (other.gameObject.CompareTag("wall")){
             envController.ResolveEvent(Event.HitWall);
-       }      
+       }  
+
+       if(other.gameObject.CompareTag("floor")){
+            if (!other.gameObject.GetComponent<IFloor>().isStepped){
+                    other.gameObject.GetComponent<IFloor>().isStepped = true;
+                    envController.ResolveEvent(Event.StepedOnNewFloor);
+                }        
+               
+       }    
         
     }
 
