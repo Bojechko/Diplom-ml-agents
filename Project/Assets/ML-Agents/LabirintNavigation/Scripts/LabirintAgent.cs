@@ -36,10 +36,16 @@ public class LabirintAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(this.transform.rotation.y);
-        sensor.AddObservation(m_AgentRb.velocity);
-        sensor.AddObservation(this.transform.position);
-        sensor.AddObservation(objInFront.transform.position);                       
+        sensor.AddObservation(this.transform.rotation.y);//1
+        sensor.AddObservation(m_AgentRb.velocity);//3
+        sensor.AddObservation(this.transform.position);//3
+
+        Vector3 toObjInFront = new Vector3((objInFront.transform.position.x - this.transform.position.x),
+                                        (objInFront.transform.position.y - this.transform.position.y),
+                                        (objInFront.transform.position.z - this.transform.position.z));
+
+        sensor.AddObservation(toObjInFront.magnitude); //1
+        sensor.AddObservation(toObjInFront.normalized);  //3                     
     }
 
    
@@ -48,9 +54,31 @@ public class LabirintAgent : Agent
         var dirToGo = Vector3.zero;
         var rotateDir = Vector3.zero;
 
-        var action = act[0];
+        //var action = act[0];
 
-        switch (action)
+        var dirToGoForwardAction = act[0];
+        var rotateDirAction = act[1];
+       // var dirToGoSideAction = act[2];
+        
+
+        if (dirToGoForwardAction == 1)
+            dirToGo =  transform.forward * 1f;
+        else if (dirToGoForwardAction == 2)
+            dirToGo =  transform.forward * -1f;
+
+        if (rotateDirAction == 1)
+            rotateDir = transform.up * -1f;
+        else if (rotateDirAction == 2)
+            rotateDir = transform.up * 1f;
+
+       /* if (dirToGoSideAction == 1)
+            dirToGo = transform.right * -1f;
+        else if (dirToGoSideAction == 2)
+            dirToGo = transform.right;*/
+
+        
+
+        /*switch (action)
         {
             case 1:
                 dirToGo = transform.forward * 1f;                
@@ -66,10 +94,9 @@ public class LabirintAgent : Agent
                 rotateDir = transform.up * -1f;
                 envController.ResolveEvent(Event.Rotate); 
                 break;            
-        }
+        }*/
         transform.Rotate(rotateDir, Time.fixedDeltaTime * 200f);
-        m_AgentRb.AddForce(dirToGo * 1f,
-            ForceMode.VelocityChange);          
+        m_AgentRb.AddForce(dirToGo * 1f, ForceMode.VelocityChange);          
        
     }
 
@@ -129,22 +156,36 @@ public class LabirintAgent : Agent
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        var discreteActionsOut = actionsOut.DiscreteActions;
+                var discreteActionsOut = actionsOut.DiscreteActions;
         if (Input.GetKey(KeyCode.D))
         {
-            discreteActionsOut[0] = 3;
+            // rotate right
+            discreteActionsOut[1] = 2;
         }
-        else if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
+            // forward
             discreteActionsOut[0] = 1;
         }
-        else if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
-            discreteActionsOut[0] = 4;
+            // rotate left
+            discreteActionsOut[1] = 1;
         }
-        else if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
+            // backward
             discreteActionsOut[0] = 2;
         }
+      /*  if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            // move left
+            discreteActionsOut[2] = 1;
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            // move right
+            discreteActionsOut[2] = 2;
+        }*/
     }
 }

@@ -103,7 +103,7 @@ public class LabirintEnvController : MonoBehaviour
         //labirintAgent.transform.eulerAngles = Vector3.zero;
         
         var randomPosY = 1f;
-        var randomRot = Random.Range(-10f, 10f);
+        var randomRot = 0f;//Random.Range(-10f, 10f);
 
         //labirintAgent.transform.localPosition = new Vector3(randomPosX, startPosition, randomPosZ);
         labirintAgent.transform.localPosition = new Vector3(randomPosX, randomPosY - startPosition.y, randomPosZ);
