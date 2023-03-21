@@ -10,10 +10,13 @@ public class IFloor : MonoBehaviour
     
     public bool isStepped = false;
 
+    //public GameObject obj;
+
     public void Start()
     {
-        envController = GetComponent<LabirintEnvController>();
+        envController = GetComponent<LabirintEnvController>();        
     }
+
 
     /* void OnCollisionEnter(Collision other)
     {

@@ -9,7 +9,8 @@ public enum Event
     StepNotForward = 3, 
     StepedOnNewFloor = 4,
     Rotate = 5,
-    
+    StepedOnOldFloor = 6,  
+    Goal = 7,    
 }
 
 public class LabirintEnvController : MonoBehaviour
@@ -51,30 +52,36 @@ public class LabirintEnvController : MonoBehaviour
             case Event.HitWall:
                
                  // apply penalty
-                labirintAgent.AddReward(-200f);
+                labirintAgent.AddReward(-5f);
                 labirintAgent.EndEpisode();
 
-                ResetScene();
+               // ResetScene();
                 break;            
 
             case Event.StepForward:                
-                labirintAgent.AddReward(5f);                
+                labirintAgent.AddReward(-0.001f);                
                 break;
             
             case Event.StepNotForward:                
-                labirintAgent.AddReward(-200f);
+                labirintAgent.AddReward(-5f);
                 labirintAgent.EndEpisode();
                 ResetScene();                
                 break;
                 
             case Event.Rotate:
-                labirintAgent.AddReward(5f);                
+                labirintAgent.AddReward(0f);                
                 break;
                 
-            case Event.StepedOnNewFloor:
-                
-                labirintAgent.AddReward(20f);
-                
+            case Event.StepedOnNewFloor:                
+                labirintAgent.AddReward(0f);                
+                break;
+
+            case Event.StepedOnOldFloor:                
+                labirintAgent.AddReward(-1f);                
+                break;
+            
+            case Event.Goal:                
+                labirintAgent.AddReward(5f);                
                 break;
         }
     }

@@ -1,0 +1,65 @@
+{
+    "Labirint": {
+        "checkpoints": [
+            {
+                "steps": 499984,
+                "file_path": "results\\Vector_Input_25.1\\Labirint\\Labirint-499984.onnx",
+                "reward": 5.708966698745886,
+                "creation_time": 1679392331.8607695,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_25.1\\Labirint\\Labirint-499984.pt"
+                ]
+            },
+            {
+                "steps": 839283,
+                "file_path": "results\\Vector_Input_25.1\\Labirint\\Labirint-839283.onnx",
+                "reward": 1.704090421850031,
+                "creation_time": 1679393116.5818262,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_25.1\\Labirint\\Labirint-839283.pt"
+                ]
+            },
+            {
+                "steps": 931325,
+                "file_path": "results\\Vector_Input_25.1\\Labirint\\Labirint-931325.onnx",
+                "reward": 4.615799975395203,
+                "creation_time": 1679393336.818896,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_25.1\\Labirint\\Labirint-931325.pt"
+                ]
+            },
+            {
+                "steps": 999993,
+                "file_path": "results\\Vector_Input_25.1\\Labirint\\Labirint-999993.onnx",
+                "reward": -5.042666753133138,
+                "creation_time": 1679393531.5521855,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_25.1\\Labirint\\Labirint-999993.pt"
+                ]
+            },
+            {
+                "steps": 1076213,
+                "file_path": "results\\Vector_Input_25.1\\Labirint\\Labirint-1076213.onnx",
+                "reward": 0.8058979365290427,
+                "creation_time": 1679393686.1805367,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_25.1\\Labirint\\Labirint-1076213.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1076213,
+            "file_path": "results\\Vector_Input_25.1\\Labirint.onnx",
+            "reward": 0.8058979365290427,
+            "creation_time": 1679393686.1805367,
+            "auxillary_file_paths": [
+                "results\\Vector_Input_25.1\\Labirint\\Labirint-1076213.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
