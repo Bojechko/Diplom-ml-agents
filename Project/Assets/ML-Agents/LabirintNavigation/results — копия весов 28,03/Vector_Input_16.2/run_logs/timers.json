@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1678975002",
+        "python_version": "3.9.6 (tags/v3.9.6:db3ff76, Jun 28 2021, 15:26:21) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Andrey\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\mlagents-learn config/Labirint.yaml --run-id=Vector_Input_16.2 --resume",
+        "mlagents_version": "0.29.0",
+        "mlagents_envs_version": "0.29.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1678975066"
+    },
+    "total": 63.835776800000005,
+    "count": 1,
+    "self": 0.004011600000005444,
+    "children": {
+        "run_training.setup": {
+            "total": 0.0909354,
+            "count": 1,
+            "self": 0.0909354
+        },
+        "TrainerController.start_learning": {
+            "total": 63.7408298,
+            "count": 1,
+            "self": 0.00013170000000428672,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 63.7406751,
+                    "count": 1,
+                    "self": 63.7406751
+                },
+                "TrainerController._save_models": {
+                    "total": 2.2999999998774e-05,
+                    "count": 1,
+                    "self": 2.2999999998774e-05
+                }
+            }
+        }
+    }
+}

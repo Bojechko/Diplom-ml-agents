@@ -29,9 +29,9 @@ public class MazeSpawner : MonoBehaviour
                 c.WallBottom.SetActive(maze.cells[x, y].WallBottom);
                 cells.Add(c.gameObject);
 
-                float randomNumber = Random.Range(0, 0);
+                float randomNumber = Random.Range(0, 3);
         
-                if(randomNumber == 0){
+                if(randomNumber == 0 || randomNumber == 1){
                     GameObject newGoal = Instantiate(goal, new Vector3(x * CellSize.x - transform.position.x + 5f, y * CellSize.y - transform.position.y + 0.5f, y * CellSize.z + 5f), transform.rotation);
                     goals.Add(newGoal);
                 }

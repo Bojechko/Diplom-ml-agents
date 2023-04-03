@@ -79,7 +79,7 @@ public class LabirintAgent : Agent
 
         if (m_AgentRb.velocity.magnitude < 1.0 ){
             counter++;
-            if (counter > 20){
+            if (counter > 200){
                 envController.ResolveEvent(Event.StepNotForward); 
                 counter = 0;
             }

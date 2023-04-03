@@ -1,0 +1,65 @@
+{
+    "Labirint": {
+        "checkpoints": [
+            {
+                "steps": 1999888,
+                "file_path": "results\\Camera_Input3\\Labirint\\Labirint-1999888.onnx",
+                "reward": 6.328139026959737,
+                "creation_time": 1679707570.9048226,
+                "auxillary_file_paths": [
+                    "results\\Camera_Input3\\Labirint\\Labirint-1999888.pt"
+                ]
+            },
+            {
+                "steps": 2499975,
+                "file_path": "results\\Camera_Input3\\Labirint\\Labirint-2499975.onnx",
+                "reward": -0.03999948501586914,
+                "creation_time": 1679715225.7975013,
+                "auxillary_file_paths": [
+                    "results\\Camera_Input3\\Labirint\\Labirint-2499975.pt"
+                ]
+            },
+            {
+                "steps": 2999928,
+                "file_path": "results\\Camera_Input3\\Labirint\\Labirint-2999928.onnx",
+                "reward": 5.55347940325737,
+                "creation_time": 1679723645.4559832,
+                "auxillary_file_paths": [
+                    "results\\Camera_Input3\\Labirint\\Labirint-2999928.pt"
+                ]
+            },
+            {
+                "steps": 3499977,
+                "file_path": "results\\Camera_Input3\\Labirint\\Labirint-3499977.onnx",
+                "reward": 4.348600337654352,
+                "creation_time": 1679732638.354544,
+                "auxillary_file_paths": [
+                    "results\\Camera_Input3\\Labirint\\Labirint-3499977.pt"
+                ]
+            },
+            {
+                "steps": 3937859,
+                "file_path": "results\\Camera_Input3\\Labirint\\Labirint-3937859.onnx",
+                "reward": 1.633294189677519,
+                "creation_time": 1679740851.4777527,
+                "auxillary_file_paths": [
+                    "results\\Camera_Input3\\Labirint\\Labirint-3937859.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3937859,
+            "file_path": "results\\Camera_Input3\\Labirint.onnx",
+            "reward": 1.633294189677519,
+            "creation_time": 1679740851.4777527,
+            "auxillary_file_paths": [
+                "results\\Camera_Input3\\Labirint\\Labirint-3937859.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1679975607",
+        "python_version": "3.9.6 (tags/v3.9.6:db3ff76, Jun 28 2021, 15:26:21) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Andrey\\AppData\\Local\\Programs\\Python\\Python39\\Scripts\\mlagents-learn config/Labirint.yaml --run-id=Camera_Input_4.3 --resume",
+        "mlagents_version": "0.29.0",
+        "mlagents_envs_version": "0.29.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1679975625"
+    },
+    "total": 17.814777499999998,
+    "count": 1,
+    "self": 0.0045496999999983245,
+    "children": {
+        "run_training.setup": {
+            "total": 0.10099579999999997,
+            "count": 1,
+            "self": 0.10099579999999997
+        },
+        "TrainerController.start_learning": {
+            "total": 17.709232,
+            "count": 1,
+            "self": 0.00014730000000184873,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 15.378718199999998,
+                    "count": 1,
+                    "self": 15.378718199999998
+                },
+                "TrainerController._save_models": {
+                    "total": 2.3303665000000002,
+                    "count": 1,
+                    "self": 0.001875500000000585,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 2.3284909999999996,
+                            "count": 1,
+                            "self": 2.3284909999999996
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

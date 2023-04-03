@@ -53,7 +53,7 @@ public class LabirintEnvController : MonoBehaviour
                
                  // apply penalty
                 labirintAgent.AddReward(-5f);
-                labirintAgent.EndEpisode();
+                //labirintAgent.EndEpisode();
 
                // ResetScene();
                 break;            

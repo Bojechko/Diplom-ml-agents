@@ -1,0 +1,65 @@
+{
+    "Labirint": {
+        "checkpoints": [
+            {
+                "steps": 256,
+                "file_path": "results\\Camera_Input4\\Labirint\\Labirint-256.onnx",
+                "reward": null,
+                "creation_time": 1679741701.3734715,
+                "auxillary_file_paths": [
+                    "results\\Camera_Input4\\Labirint\\Labirint-256.pt"
+                ]
+            },
+            {
+                "steps": 2304,
+                "file_path": "results\\Camera_Input4\\Labirint\\Labirint-2304.onnx",
+                "reward": null,
+                "creation_time": 1679741830.7962635,
+                "auxillary_file_paths": [
+                    "results\\Camera_Input4\\Labirint\\Labirint-2304.pt"
+                ]
+            },
+            {
+                "steps": 3840,
+                "file_path": "results\\Camera_Input4\\Labirint\\Labirint-3840.onnx",
+                "reward": null,
+                "creation_time": 1679741946.458233,
+                "auxillary_file_paths": [
+                    "results\\Camera_Input4\\Labirint\\Labirint-3840.pt"
+                ]
+            },
+            {
+                "steps": 8132,
+                "file_path": "results\\Camera_Input4\\Labirint\\Labirint-8132.onnx",
+                "reward": -81.10999965667725,
+                "creation_time": 1679742287.3908942,
+                "auxillary_file_paths": [
+                    "results\\Camera_Input4\\Labirint\\Labirint-8132.pt"
+                ]
+            },
+            {
+                "steps": 9028,
+                "file_path": "results\\Camera_Input4\\Labirint\\Labirint-9028.onnx",
+                "reward": null,
+                "creation_time": 1679868084.7985919,
+                "auxillary_file_paths": [
+                    "results\\Camera_Input4\\Labirint\\Labirint-9028.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 9028,
+            "file_path": "results\\Camera_Input4\\Labirint.onnx",
+            "reward": null,
+            "creation_time": 1679868084.7985919,
+            "auxillary_file_paths": [
+                "results\\Camera_Input4\\Labirint\\Labirint-9028.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

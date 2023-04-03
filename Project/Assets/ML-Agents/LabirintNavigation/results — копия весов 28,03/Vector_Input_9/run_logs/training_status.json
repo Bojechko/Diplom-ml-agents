@@ -1,0 +1,47 @@
+{
+    "Labirint": {
+        "checkpoints": [
+            {
+                "steps": 499999,
+                "file_path": "results\\Vector_Input_9\\Labirint\\Labirint-499999.onnx",
+                "reward": 12.48936170212766,
+                "creation_time": 1678782096.302363,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_9\\Labirint\\Labirint-499999.pt"
+                ]
+            },
+            {
+                "steps": 999998,
+                "file_path": "results\\Vector_Input_9\\Labirint\\Labirint-999998.onnx",
+                "reward": 9.93188854489164,
+                "creation_time": 1678784416.385092,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_9\\Labirint\\Labirint-999998.pt"
+                ]
+            },
+            {
+                "steps": 1409033,
+                "file_path": "results\\Vector_Input_9\\Labirint\\Labirint-1409033.onnx",
+                "reward": 12.925,
+                "creation_time": 1678786494.7137663,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_9\\Labirint\\Labirint-1409033.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1409033,
+            "file_path": "results\\Vector_Input_9\\Labirint.onnx",
+            "reward": 12.925,
+            "creation_time": 1678786494.7137663,
+            "auxillary_file_paths": [
+                "results\\Vector_Input_9\\Labirint\\Labirint-1409033.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

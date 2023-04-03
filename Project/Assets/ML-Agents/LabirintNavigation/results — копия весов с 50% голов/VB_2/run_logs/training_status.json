@@ -1,0 +1,65 @@
+{
+    "Labirint": {
+        "checkpoints": [
+            {
+                "steps": 1499999,
+                "file_path": "results\\VB_2\\Labirint\\Labirint-1499999.onnx",
+                "reward": 2.3589341692789967,
+                "creation_time": 1678030652.123564,
+                "auxillary_file_paths": [
+                    "results\\VB_2\\Labirint\\Labirint-1499999.pt"
+                ]
+            },
+            {
+                "steps": 1999999,
+                "file_path": "results\\VB_2\\Labirint\\Labirint-1999999.onnx",
+                "reward": 1.7818181818181817,
+                "creation_time": 1678034792.8924725,
+                "auxillary_file_paths": [
+                    "results\\VB_2\\Labirint\\Labirint-1999999.pt"
+                ]
+            },
+            {
+                "steps": 2499999,
+                "file_path": "results\\VB_2\\Labirint\\Labirint-2499999.onnx",
+                "reward": 2.2009925558312653,
+                "creation_time": 1678038931.9552414,
+                "auxillary_file_paths": [
+                    "results\\VB_2\\Labirint\\Labirint-2499999.pt"
+                ]
+            },
+            {
+                "steps": 2999998,
+                "file_path": "results\\VB_2\\Labirint\\Labirint-2999998.onnx",
+                "reward": 2.076991150442478,
+                "creation_time": 1678043089.1072154,
+                "auxillary_file_paths": [
+                    "results\\VB_2\\Labirint\\Labirint-2999998.pt"
+                ]
+            },
+            {
+                "steps": 3116811,
+                "file_path": "results\\VB_2\\Labirint\\Labirint-3116811.onnx",
+                "reward": 2.158366533864542,
+                "creation_time": 1678044064.2515163,
+                "auxillary_file_paths": [
+                    "results\\VB_2\\Labirint\\Labirint-3116811.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3116811,
+            "file_path": "results\\VB_2\\Labirint.onnx",
+            "reward": 2.158366533864542,
+            "creation_time": 1678044064.2515163,
+            "auxillary_file_paths": [
+                "results\\VB_2\\Labirint\\Labirint-3116811.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
