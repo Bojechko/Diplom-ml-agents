@@ -1,0 +1,29 @@
+{
+    "Labirint": {
+        "checkpoints": [
+            {
+                "steps": 108567,
+                "file_path": "results\\Vector_Input_19.4\\Labirint\\Labirint-108567.onnx",
+                "reward": -9.336250679127081,
+                "creation_time": 1679079830.5832186,
+                "auxillary_file_paths": [
+                    "results\\Vector_Input_19.4\\Labirint\\Labirint-108567.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 108567,
+            "file_path": "results\\Vector_Input_19.4\\Labirint.onnx",
+            "reward": -9.336250679127081,
+            "creation_time": 1679079830.5832186,
+            "auxillary_file_paths": [
+                "results\\Vector_Input_19.4\\Labirint\\Labirint-108567.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

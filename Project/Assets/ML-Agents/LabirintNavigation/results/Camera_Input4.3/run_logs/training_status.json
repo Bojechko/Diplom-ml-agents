@@ -2,58 +2,58 @@
     "Labirint": {
         "checkpoints": [
             {
-                "steps": 19999940,
-                "file_path": "results\\Camera_Input4.3\\Labirint\\Labirint-19999940.onnx",
-                "reward": 5.144663492838542,
-                "creation_time": 1680261268.9183533,
+                "steps": 18999965,
+                "file_path": "results\\Camera_Input4.3\\Labirint\\Labirint-18999965.onnx",
+                "reward": 201.3729953765869,
+                "creation_time": 1680021175.4227228,
                 "auxillary_file_paths": [
-                    "results\\Camera_Input4.3\\Labirint\\Labirint-19999940.pt"
+                    "results\\Camera_Input4.3\\Labirint\\Labirint-18999965.pt"
                 ]
             },
             {
-                "steps": 20499996,
-                "file_path": "results\\Camera_Input4.3\\Labirint\\Labirint-20499996.onnx",
-                "reward": 24.995996236801147,
-                "creation_time": 1680266375.7256467,
+                "steps": 19499877,
+                "file_path": "results\\Camera_Input4.3\\Labirint\\Labirint-19499877.onnx",
+                "reward": 141.14166577657065,
+                "creation_time": 1680026907.7088976,
                 "auxillary_file_paths": [
-                    "results\\Camera_Input4.3\\Labirint\\Labirint-20499996.pt"
+                    "results\\Camera_Input4.3\\Labirint\\Labirint-19499877.pt"
                 ]
             },
             {
-                "steps": 20999903,
-                "file_path": "results\\Camera_Input4.3\\Labirint\\Labirint-20999903.onnx",
-                "reward": -17.698504328727722,
-                "creation_time": 1680271521.6707864,
-                "auxillary_file_paths": [
-                    "results\\Camera_Input4.3\\Labirint\\Labirint-20999903.pt"
-                ]
-            },
-            {
-                "steps": 21499900,
-                "file_path": "results\\Camera_Input4.3\\Labirint\\Labirint-21499900.onnx",
-                "reward": 2.223664661248525,
-                "creation_time": 1680276698.144697,
-                "auxillary_file_paths": [
-                    "results\\Camera_Input4.3\\Labirint\\Labirint-21499900.pt"
-                ]
-            },
-            {
-                "steps": 21855877,
-                "file_path": "results\\Camera_Input4.3\\Labirint\\Labirint-21855877.onnx",
+                "steps": 19969179,
+                "file_path": "results\\Camera_Input4.3\\Labirint\\Labirint-19969179.onnx",
                 "reward": null,
-                "creation_time": 1680280592.444162,
+                "creation_time": 1680032503.4233396,
                 "auxillary_file_paths": [
-                    "results\\Camera_Input4.3\\Labirint\\Labirint-21855877.pt"
+                    "results\\Camera_Input4.3\\Labirint\\Labirint-19969179.pt"
+                ]
+            },
+            {
+                "steps": 19999993,
+                "file_path": "results\\Camera_Input4.3\\Labirint\\Labirint-19999993.onnx",
+                "reward": null,
+                "creation_time": 1680528269.922768,
+                "auxillary_file_paths": [
+                    "results\\Camera_Input4.3\\Labirint\\Labirint-19999993.pt"
+                ]
+            },
+            {
+                "steps": 20060093,
+                "file_path": "results\\Camera_Input4.3\\Labirint\\Labirint-20060093.onnx",
+                "reward": 162.1880006790161,
+                "creation_time": 1680529123.5195107,
+                "auxillary_file_paths": [
+                    "results\\Camera_Input4.3\\Labirint\\Labirint-20060093.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 21855877,
+            "steps": 20060093,
             "file_path": "results\\Camera_Input4.3\\Labirint.onnx",
-            "reward": null,
-            "creation_time": 1680280592.444162,
+            "reward": 162.1880006790161,
+            "creation_time": 1680529123.5195107,
             "auxillary_file_paths": [
-                "results\\Camera_Input4.3\\Labirint\\Labirint-21855877.pt"
+                "results\\Camera_Input4.3\\Labirint\\Labirint-20060093.pt"
             ]
         }
     },
